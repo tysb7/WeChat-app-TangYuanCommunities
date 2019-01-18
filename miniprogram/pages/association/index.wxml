@@ -1,0 +1,14 @@
+<view class='page'>
+  <view class='association'  >
+    <view class='associationlist' wx:for="{{associationData}}" bindtap='lookmore' wx:key="_id" id="{{item._id}}">
+    <view class="weui-flex__item img">
+      <image class='associationlogo' src='{{item.ass_logo}}'></image>
+    </view>
+      <view class='associationname'>{{item.ass_name}}</view>
+      <!-- <view class='associationinfo'>{{item.ass_info}}</view> -->
+    </view>
+    <!-- <view class='associationjoin'>
+
+    </view> -->
+  </view>
+</view>

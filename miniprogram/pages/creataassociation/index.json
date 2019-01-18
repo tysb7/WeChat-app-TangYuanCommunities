@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "创建社团",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-steps": "../../dist/steps/index",
+    "wemark": "../wemark/wemark"
+  }
+}

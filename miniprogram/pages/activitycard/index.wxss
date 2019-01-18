@@ -1,0 +1,46 @@
+.canvas {
+    margin: 80rpx auto;
+    width: 150px;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+
+.name{
+  margin-top: 20rpx;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  color: #ff2345;
+  text-align: center;
+}
+.time{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 50rpx;
+}
+.info{
+  
+  font-size: 30rpx;
+  color: #000;
+  line-height: 50rpx;
+}
+.cardtop{
+  background-color: #fff;
+  width: 100%;
+  margin: 30rpx 30rpx 0 30rpx;
+  border-radius:30rpx;
+  /* border: 5rpx dashed  #000; */
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+.cardbottom{
+  padding: 30rpx;
+  background-color: #fff;
+  width: 100%;
+  margin: 0 30rpx 30rpx 30rpx;
+  border-radius:30rpx;
+  /* border-bottom: 5rpx dashed  #000;
+  border-left: 5rpx dashed  #000;
+  border-right: 5rpx dashed  #000; */
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}

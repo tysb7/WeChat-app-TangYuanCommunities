@@ -1,0 +1,33 @@
+.head{
+  margin: 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+.body{
+  margin: 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+.avatar{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+
+.update{
+  margin: 30rpx;
+  background: linear-gradient(to right, #ff2345 0%, #ff663f 100%);
+  border-radius: 20rpx;
+  color: #fff;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+button::after{
+  border: 0;
+}

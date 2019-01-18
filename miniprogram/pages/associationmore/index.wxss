@@ -1,0 +1,131 @@
+page {
+  background-color: #f6f6f6;
+}
+
+.associationLogo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin: 0 30rpx;
+}
+.share_button {
+  width: 60rpx;
+  height: 60rpx;
+  background-size: 50rpx;
+  background-color: white;
+  background-repeat:no-repeat;
+}
+
+.share_button:after {
+  border: none;
+}
+.call1 {
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 50rpx;
+  margin-left: 20rpx;
+  color: #fff;
+  display: inline-block;
+}
+.Authentication{
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: 35rpx;
+}
+.headimg {
+  position: absolute;
+  top: 0rpx;
+  z-index: -1;
+}
+
+.usrinfo {
+  z-index: 10;
+}
+
+.ico {
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 20rpx;
+  padding: 0rpx;
+  margin-top: 30rpx;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+.icoinfo {
+  height: 120rpx;
+  text-align: center;
+}
+
+.icoinfotext {
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #000;
+}
+
+.avatar {
+  height: 75rpx;
+  width: 75rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 15rpx;
+}
+
+.avatarico {
+  display: inline-block;
+}
+
+.ico1 {
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+  padding: 30rpx;
+}
+
+.ico2 {
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+   box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+.ico3 {
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+   box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+.ass_info {
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+}
+
+.update{
+  margin: 30rpx;
+  background-image: linear-gradient(to right, #ff2345 0%, #ff663f 100%);
+  border-radius: 20rpx;
+  color: #fff;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+button::after{
+  border: 0;
+}
+
+.associationList{
+  padding: 30rpx;
+}
+
+associationList1{
+  color: #000;
+  font-size: 25rpx;
+}
+
+.activitymore{
+  margin: 30rpx;
+}
+
+.share-image{
+  width:400rpx;
+  height:500rpx;
+}

@@ -1,0 +1,56 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/activity/index",
+    "pages/usr/index",
+    "pages/sendactivity/index",
+    "pages/association/index",
+    "pages/associationuser/index",
+    "pages/activitymore/index",
+    "pages/userinfo/index",
+    "pages/template/index",
+    "pages/associationmore/index",
+    "pages/activitycard/index",
+    "pages/creataassociation/index",
+    "pages/creataassociations/index",
+    "pages/markdowm/index",
+    "pages/tips/index"
+    
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#000",
+    "selectedColor":"#000",
+    "backgroundColor":"#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/activity/index",
+        "iconPath":"images/tabbar.png",
+        "selectedIconPath":"images/tabbar4.png"
+      },
+      {
+        "pagePath": "pages/association/index",
+        "iconPath": "images/tabbar.png",
+        "selectedIconPath": "images/tabbar5.png"
+      },
+      {
+        "pagePath": "pages/usr/index",
+        "iconPath": "images/tabbar.png",
+        "selectedIconPath": "images/tabbar6.png"
+      }
+    ]
+  },
+  "plugins": {
+    "qcloudsms": {
+      "version": "1.0.5",
+      "provider": "wx4718484ed6fb9393"
+  }
+  }
+}

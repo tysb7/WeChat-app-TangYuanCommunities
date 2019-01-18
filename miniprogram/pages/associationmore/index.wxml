@@ -1,0 +1,86 @@
+<view class='page'>
+  <image src='/images/navibar2.png' class='headimg' style='width:100%;height:250rpx;'></image>
+  <view class='usrinfo' style='margin:30rpx;'>
+    <view class="weui-flex">
+      <view>
+        <image src='{{associationData[0].ass_logo}}' class='associationLogo' bindtap='' id="{{associationData[0]._id}}"></image>
+      </view>
+      <view class=" associationinfo">
+        <view class="call1">{{associationData[0].ass_name}}</view>
+      </view>
+      <view class="" hidden='{{Authentication}}'>
+        <image src='/images/v.png' class='Authentication'></image>
+      </view>
+    </view>
+    <view class='ico'>
+      <view class="weui-flex">
+        <view class="weui-flex__item icoinfo">
+          <view class='icoinfotext' style='margin-top:15rpx;'>{{associationList.length}}</view>
+          <view class='icoinfotext'>活动</view>
+        </view>
+        <view class="weui-flex__item icoinfo">
+          <view class='icoinfotext' style='margin-top:15rpx;'>{{associationData[0].ass_joiner.length}}</view>
+          <view class='icoinfotext'>成员</view>
+        </view>
+      </view>
+    </view>
+    <view class='ico2'>
+      <view class="ass_info">
+        <wemark md="{{associationData[0].ass_info}}" link highlight type="wemark"></wemark>
+      </view>
+    </view>
+    <view class='ico3'>
+      
+
+
+      <view class="kind-list__item-bd">
+        <view class="" wx:for="{{associationList}}" wx:key="">
+          <block class="">
+            <view class='kind-list__item'>
+              <view bindtap='activitymore' id="{{item._id}}" class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">{{item.act_date}} | {{item.act_name}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class='ico1'>
+      <view class='avatarico' wx:for="{{associationData[0].ass_joiner}}" style='display: inline-block;'>
+        <image class='avatar' src='{{item.user_avatar}}' />
+      </view>
+    </view>
+     <view class='ico1'>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <button open-type="share" class="share_button" bindtap="" style="background-image: url(https://phsl-62bbb8.tcb.qcloud.la/icon/share1.png?sign=3146f55cdb1ed3739ff1222bc044b43e&t=1538667814);"></button>
+      </view>
+      <view class="weui-flex__item">
+        <button class="share_button" bindtap="share_qrcode" style="background-image: url(https://phsl-62bbb8.tcb.qcloud.la/icon/share2.png?sign=015288f5fdfd479f9dfc50076b716061&t=1538668125);"></button>
+      </view>
+      <view class="weui-flex__item">
+        <button  class="share_button" bindtap="share_link" style="background-image: url(https://phsl-62bbb8.tcb.qcloud.la/icon/share3.png?sign=51000255b139a3ae522292cd0f32f43d&t=1538668147);"></button>
+      </view>
+    </view>
+  </view>
+    <view class='ico2' hidden='{{_openid}}'>
+      <view class="ass_info">
+        <textarea class="weui-input" style='line-height:30rpx;margin:20rpx 0rpx;height:500rpx;width:100%' maxlength="-1" bindblur="bindTextAreaBlur" value="{{ass_info}}" bindinput="ass_info" />
+      </view>
+    </view>
+  </view>
+  <button class='update' bindtap='uploadimg' hidden='{{_openid}}'>添加照片</button>
+  <button class='update' bindtap='update' hidden='{{_openid}}'>更新简介</button>
+  <button class='update' bindtap='lookmore' hidden='{{_openid}}'>查看成员</button>
+  <button class='update' bindtap='joinass1' hidden='{{joinass}}'>申请加入</button>
+  <!-- <button bindtap='joinass1'>ddd</button> -->
+  <view class="weui-footer" style='margin-top:200rpx;'>
+  <canvasdrawer painting="{{painting}}"  class="canvasdrawer" bind:getImage="eventGetImage"/>
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <view class="weui-footer__text">汤圆社团，人人都是一个社团</view>
+  </view>
+</view>

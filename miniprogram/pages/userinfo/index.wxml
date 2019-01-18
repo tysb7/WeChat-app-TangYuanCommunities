@@ -1,0 +1,47 @@
+<view class='page'>
+  <view class="page-body" >
+    <view class="page-section">
+      <view class="body__title">昵称</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input body_cells">
+          <input class="weui-input" value='{{userinfodate.user_name}}' style='width:100%'  confirm-type="done" bindblur="user_name" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="body__title">电话</view>
+      <view class="weui-cells weui-cells_after-title ">
+        <view class="weui-cell weui-cell_input body_cells">
+          <input class="weui-input" style='width:100%' value="{{userinfodate.user_phone}}" maxlength="11" type='number' confirm-type="done" bindblur="user_phone" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="body__title">微信</view>
+      <view class="weui-cells weui-cells_after-title ">
+        <view class="weui-cell weui-cell_input body_cells">
+          <input class="weui-input" style='width:100%' value="{{userinfodate.user_wechat}}" confirm-type="done" bindblur="user_wechat" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="body__title">院系</view>
+      <view class="weui-cells weui-cells_after-title ">
+        <view class="weui-cell weui-cell_input body_cells">
+          <input class="weui-input" style='width:100%' value="{{userinfodate.user_dad}}" confirm-type="done" bindblur="user_dad" />
+        </view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="body__title">学号</view>
+      <view class="weui-cells weui-cells_after-title ">
+        <view class="weui-cell weui-cell_input body_cells">
+          <input class="weui-input" style='width:100%' value="{{userinfodate.user_sn}}" confirm-type="done" bindblur="user_sn" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <form report-submit="true" bindsubmit="update">
+    <button class="weui-btn" type="primary" style='margin:30rpx;background-image: linear-gradient(to right, #ff2345 0%, #ff663f 100%);' formType="submit">更改信息</button>
+  </form>
+</view>

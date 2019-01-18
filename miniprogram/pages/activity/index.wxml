@@ -1,0 +1,37 @@
+<view class='page'>
+  <view class='card' wx:for="{{activityData}}" wx:key="" id="{{item._id}}" >
+    <view class="weui-flex__item img">
+      <image class='img' src='{{item.act_post}}' bindtap='lookmore' id="{{item._id}}"></image>
+    </view>
+    <view class="weui-flex activityname kind-list__item-hd {{!item.open.open ? 'kind-list__item-hd_show' : ''}}" bindtap='moreless' id="{{item._id}}">
+      <view class="weui-flex__item {{item.open.open ? 'yanse' : ''}}" style='font-size:35rpx;'>{{item.act_name}}</view>
+    </view>
+    <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}" hidden='{{!item.open.open}}' bindtap='moreless'>
+      <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+        <view class="weui-cell__bd activityinfo">
+          <!-- <van-icon name="location" class='icon' /> -->
+          地点：{{item.act_add}}</view>
+        <view class="weui-cell__bd activityinfo">
+          <!-- <van-icon name="clock" class='icon' /> -->
+          <view style='display:inline-block'>时间：{{item.act_date}}</view>
+          <view style='display:inline-block;margin-left:10rpx;'>{{item.act_time}}</view>
+        </view>
+        <view class="weui-cell__bd activityinfo" style='padding-bottom:20rpx;'>
+          <!-- <van-icon name="info-o" class='icon'/> -->
+          主办：{{item.act_usrass_name}}</view>
+      </view>
+    </view>
+
+    <!-- <image src='data:image/png;base64,{{src2}}'></image> -->
+  </view>
+
+  <view class="weui-footer" style='margin-top:200rpx;'>
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <!-- <official-account class="gongzhonghao"></official-account> -->
+    <view class="weui-footer__text">汤圆社团，人人都是一个社团</view>
+  </view>
+  
+</view>

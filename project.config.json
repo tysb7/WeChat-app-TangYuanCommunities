@@ -1,0 +1,73 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wxd43ec2bfbf854c39",
+	"projectname": "%E7%A4%BE%E5%9B%A2V1.0.0",
+	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": 0,
+					"name": "活动详情",
+					"pathName": "pages/activitymore/index",
+					"query": "id=W7oGu525dhqgE-fX"
+				},
+				{
+					"id": -1,
+					"name": "markdown",
+					"pathName": "pages/markdowm/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tips",
+					"pathName": "pages/tips/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "社团详情",
+					"pathName": "pages/associationmore/index",
+					"query": "id=W7n9VJ25dhqgE74m"
+				},
+				{
+					"id": -1,
+					"name": "好友开团",
+					"pathName": "pages/creataassociations/index",
+					"query": "id=W8RkS525dhqgLb1c"
+				},
+				{
+					"id": 5,
+					"name": "tips",
+					"pathName": "pages/tips/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

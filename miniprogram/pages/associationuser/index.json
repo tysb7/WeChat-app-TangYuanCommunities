@@ -1,0 +1,13 @@
+{
+  "backgroundColor": "#f6f6f6",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-icon": "../../dist/icon/index",
+    "wemark": "../wemark/wemark",
+    "van-popup": "../../dist/popup/index"
+  }
+}

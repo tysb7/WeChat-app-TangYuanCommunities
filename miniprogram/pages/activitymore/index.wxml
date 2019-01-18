@@ -1,0 +1,77 @@
+<view class='page'>
+  <image class='img' src='{{activityIdData[0].act_post}}'></image>
+  <view class='headinfo'>
+    <view class='nameinfo'>{{activityIdData[0].act_name}}</view>
+    <view class='datainfo'>
+      <view style='display:inline-block'>{{activityIdData[0].act_date}}</view>
+      <view style='display:inline-block;margin-left:10rpx;'>{{activityIdData[0].act_time}}</view>
+    </view>
+    <view class='addinfo' bindtap='openmap'>{{activityIdData[0].act_add}}</view>
+  </view>
+  <view class='usrinfo'>
+    <view class="weui-flex">
+      <view>
+        <image src='{{activityIdData[0].act_usrass_logo}}' class='associationLogo' bindtap='associationmore' id="{{activityIdData[0].act_usrass_id}}"></image>
+      </view>
+      <view class="associationinfo" bindtap='associationmore'>
+        <view class="call1">{{activityIdData[0].act_usrass_name}}</view>
+      </view>
+      <view class="" hidden='{{Authentication}}'>
+        <image src='/images/v.png' class='Authentication' hidden='{{!activityIdData[0].Authentication}}'></image>
+      </view>
+      <view class="">
+        <van-icon name="phone" class='call' bindtap='call' id="{{activityIdData[0].act_phone}}" />
+      </view>
+    </view>
+  </view>
+  <view class='moreinfo'>
+    <view class="page-section">
+      <wemark md="{{activityIdData[0].act_info}}" link highlight type="wemark"></wemark>
+    </view>
+  </view>
+  <van-popup show="{{ show }}" duration="{{500}}" bind:close="onClose">
+    <view style='width:630rpx;'>
+      <view wx:for="{{act_infos}}" style='display: inline-block;' class='act_info_div'>
+        <view style='background-color:{{item.corol}}' class='act_info_item'>{{item.num}}</view>
+      </view>
+    </view>
+  </van-popup>
+  <view class='joininfo'>
+    <view wx:for="{{joinuser}}" wx:key="" style='display: inline-block;'>
+      <image src='{{item.user_avatar}}' class='user_avatar' id="{{item.user_openid}}" bindtap='onopen'></image>
+    </view>
+  </view>
+  <view class='joininfo'>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <button open-type="share" class="share_button" bindtap="" style="background-image: url(https://phsl-62bbb8.tcb.qcloud.la/icon/share1.png?sign=3146f55cdb1ed3739ff1222bc044b43e&t=1538667814);"></button>
+      </view>
+      <view class="weui-flex__item">
+        <button class="share_button" bindtap="share_qrcode" style="background-image: url(https://phsl-62bbb8.tcb.qcloud.la/icon/share2.png?sign=015288f5fdfd479f9dfc50076b716061&t=1538668125);"></button>
+      </view>
+      <view class="weui-flex__item">
+        <button class="share_button" bindtap="share_link" style="background-image: url(https://phsl-62bbb8.tcb.qcloud.la/icon/share3.png?sign=51000255b139a3ae522292cd0f32f43d&t=1538668147);"></button>
+      </view>
+    </view>
+  </view>
+  <view class='joininfo' hidden='{{_openid}}'>
+    <view class="ass_info">
+      <textarea class="weui-input" style='line-height:30rpx;margin:20rpx 0rpx;height:500rpx;width:100%' maxlength="-1" bindblur="bindTextAreaBlur" value="{{act_info}}" bindinput="act_info" />
+    </view>
+  </view>
+  <button class='update' bindtap='uploadimg' hidden='{{_openid}}'>添加图片</button>
+  <button class='update' bindtap='update' hidden='{{_openid}}'>更新简介</button>
+  <form bindsubmit="join" report-submit="true">
+    <button class="update" formType="submit" hidden='{{joinbutton}}'>报名</button>
+  </form>
+  <button class="update1" bindtap='qrcode' formType="submit" hidden='{{!joinbutton}}'>查看凭证</button>
+  <!-- <button class='update' bindtap='signin' hidden='{{_openid}}'>扫码签到</button> -->
+  <view class="weui-footer" style='margin-top:200rpx;'>
+  
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <view class="weui-footer__text">汤圆社团，人人都是一个社团</view>
+  </view>
+</view>

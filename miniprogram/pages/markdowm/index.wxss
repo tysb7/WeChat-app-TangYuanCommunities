@@ -1,0 +1,7 @@
+.pages{
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 30rpx;
+  padding: 20rpx;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}

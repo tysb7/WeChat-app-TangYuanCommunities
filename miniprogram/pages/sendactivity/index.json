@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "发布活动",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-steps": "../../dist/steps/index",
+    "wemark": "../wemark/wemark"
+  }
+} 

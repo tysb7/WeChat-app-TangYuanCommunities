@@ -1,0 +1,8 @@
+<view class='pages'>
+  <wemark md="{{markdown}}" link highlight type="wemark"></wemark>
+</view>
+<textarea ></textarea>
+
+  <form bindsubmit="join" report-submit="true">
+    <button class="update" formType="submit" hidden='{{joinbutton}}'>报名</button>
+  </form>

@@ -1,0 +1,3 @@
+<view class='pages'>
+  <wemark md="{{markdown}}" link highlight type="wemark"></wemark>
+</view>

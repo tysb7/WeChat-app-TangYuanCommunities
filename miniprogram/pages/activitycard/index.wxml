@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="weui-flex">
+    <view class="cardtop">
+      <view class='name'>{{activityIdData[0].act_name}}</view>
+      <view class='time'>时间：{{activityIdData[0].act_time}}</view>
+      <view class='time'>日期：{{activityIdData[0].act_date}}</view>
+      <view class='time'>地点：{{activityIdData[0].act_add}}</view>
+      <view class='time'>电话：{{activityIdData[0].act_phone}}</view>
+      <canvas class='canvas' canvas-id='canvas'></canvas>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view class="cardbottom">
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class='info'>姓名：{{userinfo[0].user_name}}</view>
+        </view>
+        <view class="weui-flex__item">
+          <view class='info'>学号：{{userinfo[0].user_sn}}</view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class='info'>院系：{{userinfo[0].user_dad}}</view>
+        </view>
+        <view class="weui-flex__item">
+          <view class='info'>微信：{{userinfo[0].user_wechat}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="weui-msg__extra-area">
+    <view class="weui-footer">
+      <view class="weui-footer__links">
+        <navigator url="" class="weui-footer__link">温馨提示</navigator>
+      </view>
+      <view class="weui-footer__text">Copyright © 2017-2018</view>
+    </view>
+  </view> -->
+</view>

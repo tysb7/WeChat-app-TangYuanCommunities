@@ -1,0 +1,51 @@
+.head{
+  margin: 30rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+.logo{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.avatar{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  margin: 17rpx;
+}
+
+.titel{
+  line-height: 100rpx;
+  font-size: 35rpx;
+  text-align: center;
+}
+
+.button{
+  background: linear-gradient(to right, #ff2345 0%, #ff663f 100%);
+  margin: 30rpx;
+  color: #fff;
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+button::after{
+  border: 0
+}
+
+.guizetitel{
+  font-size: 35rpx;
+  text-align: center;
+  margin:10rpx;
+  color: #B3B3B3;
+}
+
+.guize{
+  font-size: 28rpx;
+  color: #B3B3B3
+}

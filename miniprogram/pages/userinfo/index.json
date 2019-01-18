@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "个人信息",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "van-icon": "../../dist/icon/index"
+  }
+}

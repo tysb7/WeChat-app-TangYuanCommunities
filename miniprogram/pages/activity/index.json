@@ -1,0 +1,12 @@
+{
+  "backgroundColor": "#F6F6F6",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#f6f6f6",
+  "navigationBarTitleText": "活动",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-icon": "../../dist/icon/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

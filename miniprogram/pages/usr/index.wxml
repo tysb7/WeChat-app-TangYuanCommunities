@@ -1,0 +1,79 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="weui-flex">
+      <view class="weui-flex__item ">
+         <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="denglu" hidden='{{denglu}}'>登陆</button>
+        <view class="userinfo-avatar" hidden='{{!denglu}}' bindtap='userinfo'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='act_info' hidden='{{!act_info_show}}'>
+    <view style='width:630rpx;'>
+      <view wx:for="{{act_info}}" style='display: inline-block;' class='act_info_div'>
+        <view style='background-color:{{item.corol}}' class='act_info_item'>{{item.num}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="kind-list__item">
+          <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+            <view class="weui-flex__item">{{item.name}}</view>
+            <image class="kind-list__img" src=""></image>
+          </view>
+          <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+            <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+              <block wx:for="{{item.pages}}" wx:key="">
+                <view bindtap='activitymore' id="{{index}}" class="weui-cell weui-cell_access">
+                  <view class="weui-cell__bd">{{item}}</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="kind-list">
+      <block wx:for="{{ass_list}}" wx:key="id">
+        <view class="kind-list__item">
+          <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="ass_kindToggle">
+            <view class="weui-flex__item">{{item.name}}</view>
+            <image class="kind-list__img" src=""></image>
+          </view>
+          <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+            <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+              <block wx:for="{{item.pages}}" wx:key="">
+                <view bindtap='assmore' id="{{index}}" class="weui-cell weui-cell_access">
+                  <view class="weui-cell__bd">{{item}}</view>
+                  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="kind-list__item" bindtap='sendactivity'>
+      <view class="weui-flex kind-list__item-hd">
+        <view class="weui-flex__item">发布活动</view>
+      </view>
+    </view>
+    <view class="kind-list__item" bindtap='creataassociation'>
+      <view class="weui-flex kind-list__item-hd">
+        <view class="weui-flex__item">创建社团</view>
+      </view>
+    </view>
+    <navigator class="kind-list__item" target="miniProgram" open-type="navigate" app-id="wx8abaf00ee8c3202e" extra-data="{{ extraData }}" version="release">
+      <view class="weui-flex kind-list__item-hd">
+        <view class="weui-flex__item">吐个槽</view>
+      </view>
+    </navigator>
+  </view>
+  <view class="page__ft">
+    <image src="" style="width: 84px; height: 19px;"></image>
+  </view>
+</view>

@@ -1,0 +1,67 @@
+page{
+  background-color: #F6F6F6;
+}
+.associationlist{
+  background-color: #fff;
+  height: 400rpx;
+  width: 300rpx;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+  
+  box-shadow:3rpx 5rpx 20rpx #B3B3B3;
+}
+
+.associationlogo{
+  height: 300rpx;
+  width: 300rpx;
+}
+
+ .img{
+  height: 300rpx;
+  width: 300rpx;
+  /* background-color: #fff; */
+  border-radius: 20rpx 20rpx 0rpx 0rpx;
+  overflow: hidden;
+}
+
+.associationname{
+  height: 100rpx;
+  background-color: #fff;
+  position: relative;
+  top: 0rpx;
+  text-align: center;
+  color: #000;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+}
+
+.associationinfo{
+  height: 150rpx;
+  background-color: #fff;
+  position: relative;
+  top: 0rpx;
+  text-align: center;
+  color: #cfcfcf;
+  line-height: 30rpx;
+  border-radius: 0rpx 0rpx 20rpx 20rpx;
+  font-size: 20rpx;
+  padding: 0 20rpx;
+}
+
+.associationjoin{
+  background-color: #000;
+  height: 500rpx;
+  width: 300rpx;
+  margin-left: 50rpx;
+  margin-top: 50rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+}
+
+.association{
+  
+}

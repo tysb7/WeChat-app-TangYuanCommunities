@@ -1,0 +1,161 @@
+<van-steps steps="{{ steps }}" active="{{ active }}" class="head" active-color="#ff2345" />
+<!-- step1 -->
+<view class="page-body" wx:if="{{active == 0}}">
+  <view class="page-section">
+    <view class="body__title">活动名称（15字以内）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <input class="weui-input" value='{{act_name}}' style='width:100%' maxlength="15" confirm-type="done" bindblur="act_name" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">活动地点</view>
+    <view class="weui-cells weui-cells_after-title ">
+      <view class="weui-cell weui-cell_input body_cells">
+        <input class="weui-input" style='width:100%' value="{{act_add}}" confirm-type="done" bindblur="act_add" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">活动地点(坐标)</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <view class="weui-input" bindtap='act_gps'>{{act_gpsinfo}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">活动时间（开始时间）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <picker class="weui-btn" mode="date" value="{{date}}" start="2018-09-01" end="2019-09-01" bindchange="bindDateChange">
+            <view type="" class='pickerbutton'>{{date}}</view>
+          </picker>
+        </view>
+        <view class="weui-flex__item">
+          <picker class="weui-btn" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+            <view type="" class='pickerbutton'>{{time}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">联系方式（电话号码）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <input class="weui-input" style='width:100%' value="{{act_phone}}" maxlength="11" type='number' confirm-type="done" bindblur="act_phone" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section" style=''>
+    <view class="body__title">上传海报（21：9）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-flex" style='margin:0 0 0 30rpx;'>
+        <view class="weui-flex__item" style='margin-top:20rpx;'>
+          <view class="weui-uploader__input-box" hidden='{{jian}}'>
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+          <view class="weui-uploader__input-box1" hidden='{{!jian}}'>
+            <view class="weui-uploader__input" bindtap="delImage"></view>
+          </view>
+
+        </view>
+        <view class="weui-flex__item" style='margin-top:20rpx;'>
+          <view class="weui-uploader__file" bindtap="previewImage">
+            <image class="weui-uploader__img" src="{{files}}" mode="aspectFill" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">选择主办社团</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <picker bindchange="bindPickerChange" style='width:100%;' value="{{assList[index].name}}" range-key="name" range="{{assList}}">
+          <view class="weui-input">
+            {{assList[index].name}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer" style='margin-top:200rpx;'>
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <view class="weui-footer__text">我也是有底线的(。﹏。)</view>
+  </view>
+</view>
+<!-- step2 -->
+<view class="page-body" wx:if="{{active == 1}}">
+  <view class="page-section">
+    <view class="body__title">活动简介（Markdown语法）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <textarea class="weui-input" style='line-height:30rpx;margin:20rpx 0rpx;height:{{height}}rpx;width:100%' maxlength="-1" bindblur="bindTextAreaBlur" value="{{act_info}}" bindblur="act_info" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer" style='margin-top:200rpx;'>
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <view class="weui-footer__text">我也是有底线的(。﹏。)</view>
+  </view>
+</view>
+<!-- step3 -->
+<view class="page-body" wx:if="{{active == 2}}">
+  <image class='img' src="{{files}}" mode="aspectFill"></image>
+  <view class='headinfo'>
+    <view class='nameinfo'>{{act_name}}</view>
+    <view class='datainfo'>
+      <view style='display:inline-block'>{{date}}</view>
+      <view style='display:inline-block;margin-left:10rpx;'>{{time}}</view>
+    </view>
+    <view class='addinfo'>{{act_add}}</view>
+  </view>
+  <view class='usrinfo'>
+    <view class="weui-flex">
+      <view>
+        此项暂不显示
+        <!-- <image src='{{usrass.ass_logo}}' class='associationLogo'></image> -->
+      </view>
+      <!-- <view class="weui-flex__item associationinfo">
+        <view class="call">{{usrass.ass_name}}</view>
+        
+      </view>
+      <view class="weui-flex__item">
+        <van-icon name="phone" class='call' style="margin-left: 150rpx;" bindtap='call' id="{{activityIdData[0].act_phone}}" />
+      </view> -->
+    </view>
+  </view>
+  <view class='moreinfo'>
+    <view class="page-section">
+      <wemark md="{{act_info}}" link highlight type="wemark"></wemark>
+    </view>
+  </view>
+  <view class="weui-footer" style='margin-top:200rpx;'>
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <view class="weui-footer__text">汤圆社团，人人都是一个社团</view>
+  </view>
+</view>
+
+<view class='footinfo'>
+  <view class="weui-flex">
+    <view class="weui-flex__item" wx:if="{{active >= 1}}">
+      <view class="laststep" bindtap='laststep'>上一步</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="nextstep" bindtap='nextstep'>{{nextbutton}}</view>
+    </view>
+  </view>
+</view>

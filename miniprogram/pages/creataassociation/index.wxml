@@ -1,0 +1,73 @@
+
+<!-- step1 -->
+<view class="page-body" wx:if="{{active == 0}}">
+  <view class="page-section">
+    <view class="body__title">组织名称（10字以内）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <input class="weui-input" value='{{ass_name}}' style='width:100%' maxlength="10" confirm-type="done" bindblur="ass_name" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">联系方式（电话号码）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <input class="weui-input" style='width:100%' value="{{ass_phone}}" maxlength="11" type='number' confirm-type="done" bindblur="ass_phone" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">联系方式（微信号码）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+        <input class="weui-input" value='{{ass_wechat}}' style='width:100%'  confirm-type="done" bindblur="ass_wechat" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="body__title">组织简述</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input body_cells">
+      <input class="weui-input" style='line-height:30rpx;margin:20rpx 0rpx;width:100%'   value="{{ass_mes}}" bindinput="ass_mes" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section" style='margin:0 0 100rpx 0;'>
+    <view class="body__title">上传图标（1：1）</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-flex" style='margin:0 0 0 30rpx;'>
+        <view class="weui-flex__item" style='margin-top:20rpx;'>
+          <view class="weui-uploader__input-box" style='height:141rpx;width:141rpx;' hidden='{{jian}}'>
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+          <view class="weui-uploader__input-box1" style='height:141rpx;width:141rpx;' hidden='{{!jian}}'>
+            <view class="weui-uploader__input" bindtap="delImage"></view>
+          </view>
+        </view>
+        <view class="weui-flex__item" style='margin-top:20rpx;' >
+          <view class="weui-uploader__file"  bindtap="previewImage">
+            <image class="weui-uploader__img" style='height:141rpx;width:141rpx;' src="{{files}}" mode="aspectFill" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer" style='margin-top:200rpx;'>
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+    <view class="weui-footer__text">汤圆社团，人人都是一个社团</view> 
+  </view>
+</view>
+<view class='footinfo'>
+  <view class="weui-flex">
+    <view class="weui-flex__item">
+    <form bindsubmit="nextstep" report-submit="true">
+        <button class="nextstep"  formType="submit" >申请</button>
+      </form>
+      <!-- <view class="nextstep" bindtap='uplodeimg'>提交</view> -->
+    </view>
+  </view>
+</view>

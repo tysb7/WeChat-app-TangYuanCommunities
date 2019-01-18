@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <wxmessage
+    formData="{{formData}}"
+    templateId="Bg0BnBKFY3BDzUGH3cuqqtib0KHYoHSGJA9ZjwYD2H4"
+  />
+</view>

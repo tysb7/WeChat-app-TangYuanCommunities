@@ -1,0 +1,44 @@
+<view class='head'>
+  <view class="page__title">添加新成员</view>
+  <view class="page__desc"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <checkbox-group bindchange="joinChange">
+      <label class="weui-cell weui-check__label" wx:for="{{newjoinuserList}}" id="{{item._id}}" wx:key="value">
+        <checkbox class="weui-check" value="{{item.value}}" checked="{{item.admin}}" />
+        <view class="weui-cell__hd weui-check__hd_in-checkbox">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{item.admin}}"></icon>
+          <icon class="weui-icon-checkbox_success"  type="success" size="23" wx:if="{{!item.admin}}"></icon>
+        </view>
+        <image src='{{item.user_avatar}}' class='avatar'></image>
+        <text class="weui-cell__bd">{{item.user_name}}</text>
+        <van-icon name="phone" id='{{item.phone}}' bindtap='call' />
+      </label>
+    </checkbox-group>
+  </view>
+</view>
+<view class='body'>
+  <view class="page__title">设置管理员</view>
+  <view class="page__desc">管理员有着发布活动的权限。</view>
+  <view class="weui-cells weui-cells_after-title">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="weui-cell weui-check__label" wx:for="{{ass_joinerList}}" id="{{item}}" wx:key="value">
+        <checkbox class="weui-check" value="{{item.value}}"  checked="{{item.admin}}" />
+        <view class="weui-cell__hd weui-check__hd_in-checkbox">
+          <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.admin}}"></icon>
+          <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.admin}}"></icon>
+        </view>
+        <image src='{{item.user_avatar}}' class='avatar'></image>
+        <text class="weui-cell__bd">{{item.user_name}}</text>
+        <van-icon name="phone" id='{{item.user_phone}}' catchtap='call'/>
+      </label>
+    </checkbox-group>
+  </view>
+</view>
+<button class='update' bindtap='update'>提交</button>
+<view class="weui-footer" style='margin-top:200rpx;'>
+  <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">汤圆导览</navigator>
+      <navigator url="" class="weui-footer__link">培华社联</navigator>
+    </view>-->
+  <view class="weui-footer__text">汤圆社团，人人都是一个社团</view>
+</view>
